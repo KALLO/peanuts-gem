@@ -1,0 +1,8 @@
+{
+  "name": "Peanuts Group - High-Fidelity Landing Page",
+  "description": "An ultra-modern, minimalistic, and dark-themed landing page for a B2B digital agency, featuring dynamic diagonal layouts, custom flashlight cursor, and sliding border animations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
