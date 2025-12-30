@@ -14,18 +14,14 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
       <nav className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-peanuts-accent rounded-lg flex items-center justify-center font-heading font-black text-black text-xl transition-transform group-hover:rotate-12">
-            P
-          </div>
-          <span className="font-heading font-bold text-xl tracking-tighter text-gray-900 dark:text-white">
-            PEANUTS<span className="text-peanuts-accent">.</span>
-          </span>
+          <img src="/assets/logo-on-light.png" alt="Peanuts Group" className="h-10 w-auto block dark:hidden transition-transform group-hover:scale-105" />
+          <img src="/assets/logo-on-dark.png" alt="Peanuts Group" className="h-10 w-auto hidden dark:block transition-transform group-hover:scale-105" />
         </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
           {['Palvelut', 'Referenssit', 'Meistä', 'Urat'].map((item) => (
-            <a 
+            <a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="font-heading font-medium text-sm uppercase tracking-widest text-gray-600 dark:text-[#CECECE] hover:text-peanuts-accent transition-colors relative group"
@@ -38,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
 
         {/* CTA & Theme Toggle */}
         <div className="flex items-center gap-6">
-          <button 
+          <button
             onClick={toggleTheme}
             className="p-2 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-white hover:border-peanuts-accent transition-colors"
             aria-label="Toggle theme"

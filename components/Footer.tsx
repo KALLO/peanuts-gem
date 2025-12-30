@@ -9,12 +9,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="lg:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-8 group">
-              <div className="w-8 h-8 bg-peanuts-accent rounded flex items-center justify-center font-heading font-black text-black text-lg transition-transform group-hover:rotate-12">
-                P
-              </div>
-              <span className="font-heading font-bold text-xl tracking-tighter text-gray-900 dark:text-white">
-                PEANUTS<span className="text-peanuts-accent">.</span>
-              </span>
+              <img src="/assets/logo-on-light.png" alt="Peanuts Group" className="h-8 w-auto block dark:hidden transition-transform group-hover:scale-105" />
+              <img src="/assets/logo-on-dark.png" alt="Peanuts Group" className="h-8 w-auto hidden dark:block transition-transform group-hover:scale-105" />
             </a>
             <p className="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">
               Olemme kumppanisi matkalla kohti digitaalista huomista. Rakennamme arvoa teknologian avulla.
