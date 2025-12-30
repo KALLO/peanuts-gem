@@ -7,6 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
       {/* Background Pattern */}
+      {/* Background Pattern */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.07]">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -17,7 +18,7 @@ const Hero: React.FC = () => {
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
       </div>
-      
+
       {/* Ambient Orbs */}
       <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-peanuts-accent/10 rounded-full blur-[120px] -translate-y-1/2"></div>
       <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-peanuts-secondary/5 rounded-full blur-[100px]"></div>
@@ -27,11 +28,11 @@ const Hero: React.FC = () => {
           <span className="flex h-2 w-2 rounded-full bg-peanuts-accent animate-pulse"></span>
           Digitaalisen muutoksen edelläkävijä
         </div>
-        
+
         <h1 className="text-5xl md:text-8xl font-heading font-black text-gray-900 dark:text-white leading-[1.1] tracking-tighter mb-8 max-w-5xl mx-auto">
           Rakennamme <span className="text-transparent bg-clip-text bg-gradient-to-r from-peanuts-accent to-peanuts-secondary">huomisen</span> palveluita tänään.
         </h1>
-        
+
         <p className="text-lg md:text-xl text-gray-600 dark:text-peanuts-text max-w-2xl mx-auto mb-12 leading-relaxed">
           Olemme kokenut strategi- ja teknologiatalo, joka muuttaa haastavat visiot menestyneiksi digitaalisiksi ekosysteemeiksi.
         </p>

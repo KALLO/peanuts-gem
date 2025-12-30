@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from './Button';
 import { Sun, Moon } from 'lucide-react';
 
@@ -9,9 +9,23 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ toggleTheme, isDarkMode }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 py-6 px-6 md:px-12">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between">
+    <header className={`fixed top-0 left-0 w-full z-50 px-6 md:px-12 transition-all duration-300 ${isScrolled
+        ? 'py-4 bg-white/80 dark:bg-[#130814]/80 backdrop-blur-md border-b border-gray-100 dark:border-white/5'
+        : 'py-6 bg-transparent'
+      }`}>
+      <nav className="w-full flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group">
           <img src="/assets/logo-on-light.png" alt="Peanuts Group" className="h-10 w-auto block dark:hidden transition-transform group-hover:scale-105" />
